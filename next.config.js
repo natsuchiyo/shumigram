@@ -10,6 +10,8 @@ const nextConfig = {
   // swcMinify: false,
   distDir: distDir,
   // productionBrowserSourceMaps: true,
+  basePath: process.env.GITHUB_ACTIONS ? "/shumigram" : "",
+  assetPrefix: process.env.GITHUB_ACTIONS ? "/shumigram" : "",
   images: {
     loader: "custom",
     imageSizes: [ 128, 256, 384 ],
