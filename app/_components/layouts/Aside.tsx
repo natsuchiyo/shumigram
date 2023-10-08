@@ -14,7 +14,7 @@ export const Aside = memo(function Aside() {
                 <Infomations />
             </Center>
             <Center maxWidth='100%' position='sticky' top={headerHeight} paddingTop='4'>
-                <RelationPageList />
+                {/* <RelationPageList /> */}
             </Center>
         </>
     );

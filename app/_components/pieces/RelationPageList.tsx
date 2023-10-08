@@ -14,30 +14,30 @@ export const RelationPageList = () => {
 
 
 
-    const relationPageList = usePageInfo().relationPageList;
+    // const relationPageList = usePageInfo().relationPageList;
 
-    if (!relationPageList) return null;
+    // if (!relationPageList) return null;
 
 
 
-    return (
-        <Paper padding='4' width='full' >
+    // return (
+    //     <Paper padding='4' width='full' >
 
-            <IconText as='h4' icon={LinkIcon} fontWeight='bold' fontSize='xl' marginBottom='2'>
-                関連シミュレーション
-            </IconText>
+    //         <IconText as='h4' icon={LinkIcon} fontWeight='bold' fontSize='xl' marginBottom='2'>
+    //             関連シミュレーション
+    //         </IconText>
 
-            <List spacing='3'>
-                {relationPageList.map(url => (
-                    <ListItem key={url}>
-                        <HStack>
-                            <ListIcon as={ArrowRightIcon} color='pink.500' />
-                            <Linking href={url} children={getPageInfo(url).titleElm} />
-                        </HStack>
-                    </ListItem>
-                ))}
-            </List>
+    //         <List spacing='3'>
+    //             {relationPageList.map(url => (
+    //                 <ListItem key={url}>
+    //                     <HStack>
+    //                         <ListIcon as={ArrowRightIcon} color='pink.500' />
+    //                         <Linking href={url} children={getPageInfo(url).titleElm} />
+    //                     </HStack>
+    //                 </ListItem>
+    //             ))}
+    //         </List>
 
-        </Paper>
-    );
+    //     </Paper>
+    // );
 };

@@ -45,7 +45,7 @@ export const Card = ({ url }: { url: string; }) => {
                     <LinkingOverlay href={url}>{pageInfo.titleElm}</LinkingOverlay>
                 </Heading>
 
-                <Tags tags={pageInfo.tags} />
+                {/* <Tags tags={pageInfo.tags} /> */}
 
                 <Small >{pageInfo.description}</Small>
 
