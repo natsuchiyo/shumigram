@@ -14,18 +14,19 @@ const nextConfig = {
   assetPrefix: process.env.GITHUB_ACTIONS ? "/shumigram" : "",
   images: {
     // loader: "custom",
+    unoptimized: true,
     imageSizes: [ 128, 256, 384 ],
     deviceSizes: [ 640, 828, 1200 ],
   },
-  transpilePackages: [ "next-image-export-optimizer" ],
-  env: {
-    nextImageExportOptimizer_imageFolderPath: "public/img",
-    nextImageExportOptimizer_exportFolderPath: distDir,
-    nextImageExportOptimizer_exportFolderName: "webp",
-    nextImageExportOptimizer_quality: 75,
-    nextImageExportOptimizer_storePicturesInWEBP: true,
-    nextImageExportOptimizer_generateAndUseBlurImages: true,
-  }
+  // transpilePackages: [ "next-image-export-optimizer" ],
+  // env: {
+  //   nextImageExportOptimizer_imageFolderPath: "public/img",
+  //   nextImageExportOptimizer_exportFolderPath: distDir,
+  //   nextImageExportOptimizer_exportFolderName: "webp",
+  //   nextImageExportOptimizer_quality: 75,
+  //   nextImageExportOptimizer_storePicturesInWEBP: true,
+  //   nextImageExportOptimizer_generateAndUseBlurImages: true,
+  // }
 };
 
 
