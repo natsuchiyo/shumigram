@@ -5,7 +5,8 @@ import { Card } from './_components/pieces/PageCard';
 import { Headline } from './_components/parts/Headline';
 import { simulationUrlList } from './_config/urls/urls';
 import { Metadata } from 'next';
-
+import logoImg from "./_assets/img/logo.png";
+import ExportedImage from 'next-image-export-optimizer';
 
 export const metadata: Metadata = {
   title: 'シュミグラム',
@@ -16,9 +17,11 @@ export default function TopPage() {
 
 
   return (
-    <MainContents maxWidth='full' paddingX={4} paddingY={10}>
+    <MainContents maxWidth='full' paddingY={10}>
 
-      <Center marginBottom='4'>
+
+
+      {/* <Center marginBottom='4'>
         <Headline
           as='h1'
           size='lg'
@@ -26,7 +29,7 @@ export default function TopPage() {
           design='doubleborder'
           children='プログラム一覧'
         />
-      </Center>
+      </Center> */}
 
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
@@ -36,6 +39,7 @@ export default function TopPage() {
         width='full'
         justifyItems='center'
       >
+        <ExportedImage src={logoImg} width={250} alt={'ロゴ'} />
         {simulationUrlList.map(url => <Card key={url} url={url} />)}
       </SimpleGrid>
 

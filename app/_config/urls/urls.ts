@@ -35,6 +35,14 @@ export const pageInfoList = createRouting([
             description: '確率・統計学シミュレーションサイト',
         }
     ],
+    [
+        'about',
+        {
+            _title: '当サイトについて',
+            description: '当サイトについて',
+        }
+    ],
+
     ...simulationPageInfoList
 ]);
 

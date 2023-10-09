@@ -20,7 +20,7 @@ export type PersonType = {
 export type StageType = (PersonType | null)[][];
 
 
-export type settingValuesType = {
+export type SettingValuesType = {
     rock: number;
     paper: number;
     scissors: number;

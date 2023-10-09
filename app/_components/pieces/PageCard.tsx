@@ -1,9 +1,10 @@
-import { Box, Heading, LinkBox } from "@chakra-ui/react";
+import { Box, Divider, Heading, LinkBox } from "@chakra-ui/react";
 import ExportedImage from "next-image-export-optimizer";
 import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
 import { getPageInfo } from "../../_config/urls/_functions/usePageInfo";
+
 
 
 
@@ -32,12 +33,13 @@ export const Card = ({ url }: { url: string; }) => {
         >
             <ExportedImage
                 priority
-                src={'/img' + url + '.png'}
+                src={'/img' + url + '.webp'}
                 alt={pageInfo.title}
                 width={300}
                 height={200}
                 style={{ objectFit: 'contain' }}
             />
+            <Divider borderColor='mainDark' borderBottomWidth={2} margin='auto' width='80%' />
 
             <Box padding='5'>
 

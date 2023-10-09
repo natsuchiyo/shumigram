@@ -9,9 +9,10 @@ import { FormErrorTooltip } from "../FormErrorTooltip";
 
 
 
-export const FormInput = ({ name, options, ...props }: InputProps & {
+export const FormInput = ({ name, options, isShowError = true, ...props }: InputProps & {
     name: string;
     options?: RegisterOptions;
+    isShowError?: boolean;
 }) => {
 
 
@@ -21,7 +22,7 @@ export const FormInput = ({ name, options, ...props }: InputProps & {
 
 
     return (
-        <FormErrorTooltip isShow={error} text={error?.message}  >
+        <FormErrorTooltip isShow={isShowError && error} text={error?.message}  >
             <Input {...props as any} isInvalid={error} {...register(name, options)} />
         </FormErrorTooltip>
     );

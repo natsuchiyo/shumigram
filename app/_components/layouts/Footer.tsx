@@ -36,7 +36,7 @@ export const Footer = memo(function Footer() {
                         />
                     </Linking> */}
                 </Stack>
-                <Small color='subtext'>© probabi</Small>
+                <Small color='subtext'>© シュミグラム</Small>
             </Center >
         </footer>
     );

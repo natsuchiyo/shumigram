@@ -1,5 +1,5 @@
 {
-  "name": "nandemo-simulations",
+  "name": "shumigram",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "testgen": "playwright codegen --channel chrome http://localhost:3000/",
     "image": "next-image-export-optimizer",
     "start": "next start",
-    "serve": "serve ./.dist",
     "lint": "next lint",
     "trace": "node scripts/trace.mjs .next/trace",
     "analyze": "cross-env ANALYZE=true next build",

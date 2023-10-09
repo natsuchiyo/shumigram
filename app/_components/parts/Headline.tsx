@@ -61,7 +61,6 @@ const Colorfulborder = (props: HeadingProps) => {
             borderBottomWidth='3px'
             borderColor='gray.100'
             position='relative'
-            paddingBottom='2'
             _before={{
                 position: 'absolute',
                 content: `""`,
@@ -74,7 +73,9 @@ const Colorfulborder = (props: HeadingProps) => {
                 width: '30%'
             }}
             {...props as any}
-        />
+        >
+            <Box padding={2}>{props.children}</Box>
+        </Heading>
     );
 };
 

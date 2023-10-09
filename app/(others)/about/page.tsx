@@ -26,7 +26,7 @@ export default function Page() {
             <Title />
 
             <Paragraph marginTop='0'>
-                いろいろなシミュレーションやミニゲームを制作しています。
+                いろいろなシミュレーションやミニゲームを公開しています。
             </Paragraph>
 
             <Section>
@@ -59,7 +59,7 @@ export default function Page() {
             </Section>
 
             <Section>
-                <Headline design="leftborder" size='md' children='関連サイト' />
+                <Headline design="leftborder" size='md' children='制作サイト' />
                 <Paragraph>
                     <ExternalLinking
                         href="https://probabi.com"

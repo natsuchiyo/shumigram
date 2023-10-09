@@ -14,8 +14,8 @@ export const MainContents = (props: FlexProps) => {
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
-                gap='20'
-                paddingY='20'
+                gap='12'
+                paddingY='12'
                 width='full'
                 // maxWidth='3xl'
                 {...props}

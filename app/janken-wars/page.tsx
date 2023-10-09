@@ -1,7 +1,7 @@
 'use client';
 
 import { useLogic } from "./_functions/useLogic";
-import { Box, Button, HStack, VStack } from "@chakra-ui/react";
+import { Badge, Box, Button, HStack, VStack } from "@chakra-ui/react";
 import { MainContents } from "../_components/layouts/MainContents";
 import { Title } from "../_components/parts/Title";
 import { Settings } from "./_componets/Settings";
@@ -22,10 +22,11 @@ export default function Page() {
       <Title />
 
       <div>
-        <HStack>
-          <Box as='span' color={handColors.rock} fontWeight='bold'>青:グー</Box>
-          <Box as='span' color={handColors.scissors} fontWeight='bold'>赤:チョキ</Box>
-          <Box as='span' color={handColors.paper} fontWeight='bold'>緑:パー</Box>
+
+        <HStack justifyContent='center' marginBottom='2'>
+          <Badge variant='subtle' colorScheme='green' children='青:グー' />
+          <Badge variant='subtle' colorScheme='orange' children='赤:チョキ' />
+          <Badge variant='subtle' colorScheme='blue' children='緑:パー' />
         </HStack>
 
         <canvas
@@ -35,14 +36,15 @@ export default function Page() {
           style={{
             width: '100%',
             objectFit: 'contain',
-            maxWidth: '360px'
+            maxWidth: '360px',
+            borderRadius: '12px'
           }}
         />
 
-        <VStack spacing={4} marginTop={4}>
+        <VStack spacing={2} marginTop={2}>
           <HStack>
             <Button onClick={start} isDisabled={isRunning}>スタート</Button>
-            <Button onClick={stop} isDisabled={!isRunning}>ストップ</Button>
+            <Button onClick={stop}>ストップ</Button>
             <Button onClick={reset}>リセット</Button>
           </HStack>
           <Settings onSubmit={setSettingValues} />

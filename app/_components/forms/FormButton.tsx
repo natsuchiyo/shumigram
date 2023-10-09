@@ -12,6 +12,7 @@ export const FormButton = (props: ButtonProps) => {
     const { control } = useContext(FormContext);
     const { isSubmitted, isValid } = useFormState({ control });
 
+
     // サブミット後にisValidでない場合はボタンを無効にする
     return <Button type='submit' isDisabled={isSubmitted && !isValid} children='送信' {...props as any} />;
 };
