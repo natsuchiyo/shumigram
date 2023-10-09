@@ -7,6 +7,7 @@ import { simulationUrlList } from './_config/urls/urls';
 import { Metadata } from 'next';
 import logoImg from "./_assets/img/logo.png";
 import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'シュミグラム',
@@ -18,8 +19,6 @@ export default function TopPage() {
 
   return (
     <MainContents maxWidth='full' paddingY={10}>
-
-
 
       {/* <Center marginBottom='4'>
         <Headline
@@ -39,7 +38,7 @@ export default function TopPage() {
         width='full'
         justifyItems='center'
       >
-        <ExportedImage src={logoImg} width={250} alt={'ロゴ'} />
+        <Image src={logoImg} width={250} alt={'ロゴ'} />
         {simulationUrlList.map(url => <Card key={url} url={url} />)}
       </SimpleGrid>
 
