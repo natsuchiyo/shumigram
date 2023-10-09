@@ -38,7 +38,7 @@ export default function TopPage() {
         width='full'
         justifyItems='center'
       >
-        <Image src={logoImg} width={250} alt={'ロゴ'} />
+        <Image src={logoImg.src} width={250} alt={'ロゴ'} />
         {simulationUrlList.map(url => <Card key={url} url={url} />)}
       </SimpleGrid>
 
