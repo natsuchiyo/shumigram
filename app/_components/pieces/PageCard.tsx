@@ -4,7 +4,7 @@ import { LinkingOverlay } from "../parts/Linking";
 import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
 import { getPageInfo } from "../../_config/urls/_functions/usePageInfo";
-
+import Image from 'next/image';
 
 
 
@@ -31,7 +31,7 @@ export const Card = ({ url }: { url: string; }) => {
                 boxShadow: 'md'
             }}
         >
-            <ExportedImage
+            <Image
                 priority
                 src={'/img' + url + '.webp'}
                 alt={pageInfo.title}

@@ -13,7 +13,7 @@ const nextConfig = {
   basePath: process.env.GITHUB_ACTIONS ? "/shumigram" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/shumigram" : "",
   images: {
-    loader: "custom",
+    // loader: "custom",
     imageSizes: [ 128, 256, 384 ],
     deviceSizes: [ 640, 828, 1200 ],
   },
