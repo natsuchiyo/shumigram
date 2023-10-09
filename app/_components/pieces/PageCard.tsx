@@ -5,6 +5,7 @@ import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
 import { getPageInfo } from "../../_config/urls/_functions/usePageInfo";
 import Image from 'next/image';
+import { baseUrl } from "../../_config/values/constants";
 
 
 
@@ -31,9 +32,9 @@ export const Card = ({ url }: { url: string; }) => {
                 boxShadow: 'md'
             }}
         >
-            <Image
+            <ExportedImage
                 priority
-                src={'/img' + url + '.webp'}
+                src={`${baseUrl}/img${url}.webp`}
                 alt={pageInfo.title}
                 width={300}
                 height={200}
