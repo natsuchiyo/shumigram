@@ -16,7 +16,7 @@ export const customTheme = extendTheme(
         colors: {
             mainLight: theme.colors.pink[400],
             mainDark: theme.colors.pink[700],
-            button: theme.colors.cyan[500],
+            button: theme.colors.pink[500],
             accent: theme.colors.green[500],
             link: theme.colors.cyan[600],
             warning: theme.colors.red[500],

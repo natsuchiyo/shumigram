@@ -31,6 +31,7 @@ const NavContents = () => {
                 icon={DragHandleIcon}
                 fontWeight='bold'
                 fontSize='sm'
+                color='subtext'
                 borderBottomWidth='1px'
                 borderColor='gray.100'
                 padding={2}
@@ -39,20 +40,23 @@ const NavContents = () => {
 
             <List marginTop='4'>
                 {simulationUrlList.map(url => (
-                    <Fragment key={url}>
-                        <LinkBox
-                            _hover={{ backgroundColor: 'pink.100' }}
-                            padding={4}
-                            borderBottomWidth='1px'
-                            borderColor='gray.100'
-                        >
-                            <ListItem >
-                                <LinkingOverlay href={url}>
-                                    {getPageInfo(url).titleElm}
-                                </LinkingOverlay>
-                            </ListItem>
-                        </LinkBox>
-                    </Fragment>
+                    // <Fragment >
+                    <LinkBox
+                        key={url}
+                        _hover={{ backgroundColor: 'mainLight', color: 'white' }}
+                        padding={4}
+                        marginX={2}
+                        borderBottomWidth='1px'
+                        borderColor='gray.100'
+                        borderRadius={4}
+                    >
+                        <ListItem >
+                            <LinkingOverlay href={url}>
+                                {getPageInfo(url).titleElm}
+                            </LinkingOverlay>
+                        </ListItem>
+                    </LinkBox>
+                    // </Fragment>
                 ))}
             </List>
         </Box >

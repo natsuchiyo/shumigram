@@ -13,9 +13,15 @@ export const Infomations = () => {
     return (
         <Paper padding='4' width='full' >
 
-            <IconText as='h4' icon={InfoOutlineIcon} fontWeight='bold' fontSize='xl' marginBottom='2'>
-                お知らせ
-            </IconText>
+            <IconText
+                as='h4'
+                icon={InfoOutlineIcon}
+                color='subtext'
+                fontWeight='bold'
+                fontSize='xl'
+                marginBottom='2'
+                children='お知らせ'
+            />
 
             <List spacing='3'>
                 {InfomationsList.map((info, i) => (
