@@ -11,14 +11,14 @@ export const simulationPageInfoList: [string, BasePageInfoType][] = [
         'janken-wars',
         {
             _title: 'じゃんけん合戦',
-            description: '大量の個体を発生させてじゃんけんで争います',
-            // tags: [tags.確率, tags.遊び],
-            // relationPageList: [
-            //     '/round-robin',
-            //     '/central-limit-theorem',
-            //     '/t-test',
-            // ],
-            // isSimulation: true
+            description: '大量の個体を発生させてじゃんけんで争います。',
+        }
+    ],
+    [
+        'block-pazzle',
+        {
+            _title: '3Dブロックパズル',
+            description: 'テトリスの３次元版です。落ちてくるブロックを作成することもできます。',
         }
     ],
 
