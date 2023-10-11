@@ -2,7 +2,7 @@
 import { object, number } from "yup";
 import { createYupResolver } from "../../_components/forms/formErrorMessage";
 import { SettingValuesType } from "../_types";
-import { maxHandSize } from "../_values/_constants";
+import { maxHandSize } from "./_constants";
 
 
 

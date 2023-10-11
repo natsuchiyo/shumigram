@@ -24,9 +24,9 @@ export default function Page() {
       <div>
 
         <HStack justifyContent='center' marginBottom='2'>
-          <Badge variant='subtle' colorScheme='green' children='青:グー' />
+          <Badge variant='subtle' colorScheme='green' children='緑:グー' />
           <Badge variant='subtle' colorScheme='orange' children='赤:チョキ' />
-          <Badge variant='subtle' colorScheme='blue' children='緑:パー' />
+          <Badge variant='subtle' colorScheme='blue' children='青:パー' />
         </HStack>
 
         <canvas

@@ -5,7 +5,7 @@ import { FormButton } from '../../_components/forms/FormButton';
 import { FormInput } from '../../_components/forms/inputs/Input';
 import { initialSettingValues } from '../_values/_constants';
 import { Bold, Small } from '../../_components/parts/Text';
-import { resolver } from './schema';
+import { resolver } from '../_values/schema';
 
 
 
