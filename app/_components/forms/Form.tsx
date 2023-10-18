@@ -26,7 +26,7 @@ export const Form = <T extends FieldValues = any>(props: FormPropsType<T>) => {
     // TODO 必要？
     // const methodValues = useMemo(() => methods, []);
 
-    // サブミットして得られるデータはディープコピーされているため,すべて新らしいオブジェクトとなる
+    // サブミットして得られるデータはディープコピーされているため,すべて新しいオブジェクトとなる
     const onSubmit = methods.handleSubmit(
         (data: T) => { props.onSubmit(copy(data)); }
     );

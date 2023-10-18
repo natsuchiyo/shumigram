@@ -1,11 +1,11 @@
 'use client';
 
 import { useLogic } from "./_functions/useLogic";
-import { Badge, Box, Button, HStack, VStack } from "@chakra-ui/react";
+import { Badge, Button, HStack, VStack } from "@chakra-ui/react";
 import { MainContents } from "../_components/layouts/MainContents";
 import { Title } from "../_components/parts/Title";
 import { Settings } from "./_componets/Settings";
-import { canvasSize, handColors } from "./_values/_constants";
+import { canvasSize } from "./_values/_constants";
 
 
 

@@ -19,11 +19,6 @@ export const createEmptyList = () => {
 
 
 export const getNextPosition = ({ x, y }: PositionType) => {
-    // console.log('↓-------------------------------------------------------------------------');
-    // console.log(x,);
-    // console.log(x + (x === 0 ? randomInt(0, 1) : x === stageLength - 1 ? randomInt(-1, 0) : randomInt(-1, 1)));
-    // console.log(y,);
-    // console.log(y + (y === 0 ? randomInt(0, 1) : y === stageLength - 1 ? randomInt(-1, 0) : randomInt(-1, 1)),);
     return {
         x: x + (x === 0 ? randomInt(0, 1) : x === stageLength - 1 ? randomInt(-1, 0) : randomInt(-1, 1)),
         y: y + (y === 0 ? randomInt(0, 1) : y === stageLength - 1 ? randomInt(-1, 0) : randomInt(-1, 1)),
