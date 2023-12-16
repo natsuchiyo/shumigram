@@ -1,8 +1,5 @@
 
 
-console.log('↓-------------------------------------------------------------------------');
-console.log(process.env);
-console.log(process.env.GITHUB_ACTIONS ? "/shumigram" : "");
 
 const distDir = '.dist';
 

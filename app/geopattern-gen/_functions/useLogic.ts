@@ -82,6 +82,9 @@ export const useLogic = () => {
 
         const circles = await snapshot.getPromise(circlesAtom);
 
+        console.log('↓--------------------------------------config-----------------------------------');
+        console.log(config);
+
         window.history.replaceState(null, '', `${config.basePath}/${pageName}?${createQueryParams(circles, bgColor)}`);
 
         radiansListRef.current = createInitialRadiansList(circles);
