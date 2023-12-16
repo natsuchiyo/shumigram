@@ -2,7 +2,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import { DescriptionArea, DescriptionSection, DescripSubArea } from '../../_common/components/pieces/Descriptions';
 import { getImgPath } from '../../_common/functions/urls/getImgPath';
 import { pageName } from '../_values/constants';
-import { Box, List, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 
 
 
