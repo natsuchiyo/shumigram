@@ -1,5 +1,5 @@
-import { BlockPazzleState, Cood3DType } from "../_type";
-import { blockSize } from "../_values";
+import { BlockPazzleState, Cood3DType } from "../values/_type";
+import { blockSize } from "../values/_values";
 
 
 

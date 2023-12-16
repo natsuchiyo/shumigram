@@ -21,7 +21,4 @@ export const handColors: { [key in HandsType]: string; } = {
     rock: '#4CAF50',//緑
     scissors: '#F57C00',//赤
     paper: '#2196F3',//青
-    // rock: theme.colors.green[500] as any,
-    // scissors: theme.colors.orange[500] as any,
-    // paper: theme.colors.blue[400] as any,
 };

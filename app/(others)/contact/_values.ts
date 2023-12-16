@@ -1,5 +1,5 @@
 import { ObjectSchema, object, string } from "yup";
-import { createYupResolver } from "../../_components/forms/formErrorMessage";
+import { createYupResolver } from "../../_common/components/forms/parts/formErrorMessage";
 
 
 export type FormValuesType = {

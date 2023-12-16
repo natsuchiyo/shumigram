@@ -1,9 +1,8 @@
-import { MainContents } from '../_components/layouts/MainContents';
-import { Title } from '../_components/parts/Title';
-import { MainGame } from './MainGame';
-import { Description } from './Description';
-
-
+import { MainContents } from '../_common/components/layouts/MainContents';
+import { Title } from '../_common/components/parts/Title';
+import { MainGame } from './_components/MainGame';
+import { Description } from './_components/Description';
+import { createMetadata } from '../_common/functions/urls/createMetadata';
 
 
 
@@ -24,3 +23,4 @@ export default function Page() {
 
 
 
+export const metadata = createMetadata('/block-pazzle');

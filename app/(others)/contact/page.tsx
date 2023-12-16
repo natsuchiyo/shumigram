@@ -1,9 +1,9 @@
-'use client';
 
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-import { Title } from '../../_components/parts/Title';;
-import { MainContents } from '../../_components/layouts/MainContents';
+import { Title } from '../../_common/components/parts/Title';;
+import { MainContents } from '../../_common/components/layouts/MainContents';
 import { ContactForm } from './ContactForm';
+import { createMetadata } from '../../_common/functions/urls/createMetadata';
+import { CaptchaProvider } from './CaptchaProvider';
 
 
 
@@ -11,11 +11,14 @@ import { ContactForm } from './ContactForm';
 export default function Page() {
 
     return (
-        <GoogleReCaptchaProvider reCaptchaKey="6Le_paIUAAAAACyMS6SHCxrpVVikuBi61qwgh--l" scriptProps={{ async: true }}>
+        <CaptchaProvider>
             <MainContents>
                 <Title />
                 <ContactForm />
             </MainContents>
-        </GoogleReCaptchaProvider>
+        </CaptchaProvider>
     );
 };
+
+
+export const metadata = createMetadata('/contact');

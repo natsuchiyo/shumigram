@@ -1,35 +1,20 @@
-import { Center, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
-import { MainContents } from './_components/layouts/MainContents';
-import { Card } from './_components/pieces/PageCard';
-import { Headline } from './_components/parts/Headline';
-import { simulationUrlList } from './_config/urls/urls';
-import { Metadata } from 'next';
-import logoImg from "./_assets/img/logo.png";
+import { MainContents } from './_common/components/layouts/MainContents';
+import { PageCard } from './_common/components/pieces/PageCard';
 import ExportedImage from 'next-image-export-optimizer';
-import Image from 'next/image';
-import { baseUrl } from './_config/values/constants';
+import { createMetadata } from './_common/functions/urls/createMetadata';
+import config from './_config/config';
+import { listedPathList } from './_common/values/listedPathList';
 
-export const metadata: Metadata = {
-  title: 'シュミグラム',
-  description: '趣味で始めるプログラミング',
-};
+
+
 
 export default function TopPage() {
 
 
   return (
     <MainContents maxWidth='full' paddingY={10}>
-
-      {/* <Center marginBottom='4'>
-        <Headline
-          as='h1'
-          size='lg'
-          display='inline-block'
-          design='doubleborder'
-          children='プログラム一覧'
-        />
-      </Center> */}
 
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
@@ -39,10 +24,16 @@ export default function TopPage() {
         width='full'
         justifyItems='center'
       >
-        <ExportedImage src={baseUrl + '/img/logo.png'} width={250} height={250} alt='ロゴ' />
-        {simulationUrlList.map(url => <Card key={url} url={url} />)}
+
+        <ExportedImage src={config.basePath + '/img/logo.png'} width={250} height={250} alt='ロゴ' />
+
+        {listedPathList.map(pageName => <PageCard key={pageName} path={pageName} />)}
       </SimpleGrid>
 
     </MainContents>
   );
 }
+
+
+
+export const metadata = createMetadata('');

@@ -1,56 +1,23 @@
-'use client';
-
-import { useLogic } from "./_functions/useLogic";
-import { Badge, Button, HStack, VStack } from "@chakra-ui/react";
-import { MainContents } from "../_components/layouts/MainContents";
-import { Title } from "../_components/parts/Title";
-import { Settings } from "./_componets/Settings";
-import { canvasSize } from "./_values/_constants";
+import { MainContents } from "../_common/components/layouts/MainContents";
+import { Title } from "../_common/components/parts/Title";
+import { createMetadata } from "../_common/functions/urls/createMetadata";
+import { MainGame } from "./_componets/MainGame";
 
 
 
 
 export default function Page() {
 
-
-  const { start, stop, reset, canvasRef, isRunning, setSettingValues } = useLogic();
-
-
   return (
     <MainContents>
 
       <Title />
 
-      <div>
+      <MainGame />
 
-        <HStack justifyContent='center' marginBottom='2'>
-          <Badge variant='subtle' colorScheme='green' children='緑:グー' />
-          <Badge variant='subtle' colorScheme='orange' children='赤:チョキ' />
-          <Badge variant='subtle' colorScheme='blue' children='青:パー' />
-        </HStack>
-
-        <canvas
-          ref={canvasRef}
-          width={canvasSize}
-          height={canvasSize}
-          style={{
-            width: '100%',
-            objectFit: 'contain',
-            maxWidth: '360px',
-            borderRadius: '12px'
-          }}
-        />
-
-        <VStack spacing={2} marginTop={2}>
-          <HStack>
-            <Button onClick={start} isDisabled={isRunning}>スタート</Button>
-            <Button onClick={stop}>ストップ</Button>
-            <Button onClick={reset}>リセット</Button>
-          </HStack>
-          <Settings onSubmit={setSettingValues} />
-        </VStack>
-      </div>
     </MainContents >
   );
 }
 
+
+export const metadata = createMetadata('/janken-wars');

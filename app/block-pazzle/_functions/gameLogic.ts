@@ -1,6 +1,6 @@
 import { copy } from "copy-anything";
-import { BlockPazzleState, Cood3DType } from "../_type";
-import { createInitialState, stageWithMarginHeight, createStageLayer, completeScore, fixScore, pickAndCreateBlock, stageHeight, blockSize } from "../_values";
+import { BlockPazzleState, Cood3DType } from "../values/_type";
+import { createInitialState, stageWithMarginHeight, createStageLayer, completeScore, fixScore, pickAndCreateBlock, stageHeight } from "../values/_values";
 
 
 

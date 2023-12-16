@@ -5,7 +5,7 @@ var fs = require('fs');
  * npm run createpage -- forex week-rtns　のように実行する（--の後に空白をあける）
  */
 
-const directory = 'src/pages/' + process.argv[ 2 ] + '/' + process.argv[ 3 ];
+const directory = 'app/' + process.argv[ 2 ];
 const crlf = (strs) => strs.replace(/\n/g, '\r\n');
 
 
@@ -16,13 +16,13 @@ fs.mkdirSync(directory);
 fs.writeFileSync(directory + '/index.tsx', crlf(
     `import  { memo, useState } from 'react';
 import { pageValues, initialState } from "./values";
-import { HeaderSection } from '../../_components/wrapper/HeaderSection';
+import { HeaderSection } from '../../_common/components/wrapper/HeaderSection';
 import { Description } from './Description';
-import { LayoutedPageContent } from '../../_components/layouts/LayoutedPageContent';
-import { D3Svg } from '../../_components/d3/D3Svg';
-import { d3Domain, d3Margin } from '../../_components/d3/_functions/util';
-import { getResponsiveSize } from '../../_functions/util';
-import { FormWithButton } from '../../_components/forms/FormWithButton';
+import { LayoutedPageContent } from '../../_common/components/layouts/LayoutedPageContent';
+import { D3Svg } from '../../_common/components/d3/D3Svg';
+import { d3Domain, d3Margin } from '../../_common/components/d3/_common/functions/util';
+import { getResponsiveSize } from '../../_common/functions/util';
+import { FormWithButton } from '../../_common/components/forms/FormWithButton';
 
 
 
@@ -69,7 +69,7 @@ const d3Props = createD3SvgProps({
 // 説明コンポーネント
 fs.writeFileSync(directory + '/Description.tsx', crlf(
     `import { memo } from "react";
-import { DescriptionSection } from "../../_components/wrapper/DescriptionSection";
+import { DescriptionSection } from "../../_common/components/wrapper/DescriptionSection";
 
 
 export const Description = memo(() => {
@@ -85,7 +85,7 @@ export const Description = memo(() => {
 
 // values設定ファイル
 fs.writeFileSync(directory + '/values.ts', crlf(
-    `import { PageValueType } from "../../_components/layouts/Layout";
+    `import { PageValueType } from "../../_common/components/layouts/Layout";
 
 export type StateType = {
    

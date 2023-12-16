@@ -1,9 +1,10 @@
 import { Box, TextProps, Text } from "@chakra-ui/react";
-import { MainContents } from "../../_components/layouts/MainContents";
-import { Headline } from "../../_components/parts/Headline";
-import { ExternalLinking } from "../../_components/parts/Linking";
+import { MainContents } from "../../_common/components/layouts/MainContents";
+import { Headline } from "../../_common/components/parts/Headline";
+import { ExternalLinking } from "../../_common/components/parts/Linking";
 import { PropsWithChildren } from "react";
-import { Title } from "../../_components/parts/Title";
+import { Title } from "../../_common/components/parts/Title";
+import { createMetadata } from "../../_common/functions/urls/createMetadata";
 
 
 const Paragraph = (props: TextProps) => {
@@ -90,3 +91,6 @@ export default function Page() {
     );
 };
 
+
+
+export const metadata = createMetadata('/about');

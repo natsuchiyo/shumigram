@@ -1,8 +1,10 @@
+'use client';
+
 import { useEffect, useRef, useState } from "react";
 import { handColors, initialSettingValues, scale, stageLength } from "../_values/_constants";
-import { randomInt } from "../../_functions/random";
 import { drawPerson, getNextPosition, fight, clearPerson, createEmptyList } from "./utils";
 import { PersonType, StageType, PositionType, HandsType } from "../_types";
+import { randomInt } from "../../_common/functions/maths/random";
 
 
 

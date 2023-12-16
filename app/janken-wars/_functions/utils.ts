@@ -1,4 +1,4 @@
-import { randomInt } from "../../_functions/random";
+import { randomInt } from "../../_common/functions/maths/random";
 import { PositionType, PersonType } from "../_types";
 import { handColors, stageLength } from "../_values/_constants";
 

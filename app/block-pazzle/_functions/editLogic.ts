@@ -1,5 +1,5 @@
-import { BlockPazzleState, BlockShapeType } from "../_type";
-import { blockSize } from "../_values";
+import { BlockPazzleState, BlockShapeType } from "../values/_type";
+import { blockSize } from "../values/_values";
 
 
 

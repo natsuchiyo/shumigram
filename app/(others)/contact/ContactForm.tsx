@@ -1,15 +1,15 @@
 'use client';
 
-import { Badge, Box, BoxProps, FormLabel, FormLabelProps, Grid, useToast } from '@chakra-ui/react';
-import { Form } from '../../_components/forms/Form';
-import { FormButton } from '../../_components/forms/FormButton';
-import { FormInput } from '../../_components/forms/inputs/Input';
-import { FormTextarea } from '../../_components/forms/inputs/Textarea';
+import { Badge, Box, FormLabel, Grid, useToast } from '@chakra-ui/react';
+import { Form } from '../../_common/components/forms/Form';
+import { FormInput } from '../../_common/components/forms/inputs/Input';
+import { FormTextarea } from '../../_common/components/forms/inputs/Textarea';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { FormValuesType, postContact, resolver } from './_values';
 import useSWRMutation from "swr/mutation";
 import { PropsWithChildren } from 'react';
-import { notice } from '../../_functions/console';
+import { notice } from '../../_common/functions/console';
+import { FormButton } from '../../_common/components/forms/parts/FormButton';
 
 
 

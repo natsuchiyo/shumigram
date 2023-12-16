@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useImmer } from "use-immer";
-import { useRun } from "../../_functions/hooks/utilHooks";
-import { createInitialState } from "../_values";
+import { useRun } from "../../_common/functions/hooks/utilHooks";
+import { createInitialState } from "../values/_values";
 import { clickBox, decreaseIndex, increaseIndex, addblockShape, removeblockShape } from "./editLogic";
 import { dropBlock, removeStagePlane, changeStatus } from "./gameLogic";
 import { moveBlock, rotateBlock } from "./handleBlock";

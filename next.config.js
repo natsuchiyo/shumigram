@@ -23,9 +23,9 @@ const nextConfig = {
     nextImageExportOptimizer_imageFolderPath: "public/img",
     nextImageExportOptimizer_exportFolderPath: distDir,
     nextImageExportOptimizer_exportFolderName: "webp",
-    nextImageExportOptimizer_quality: 75,
-    nextImageExportOptimizer_storePicturesInWEBP: true,
-    nextImageExportOptimizer_generateAndUseBlurImages: true,
+    nextImageExportOptimizer_quality: '75',
+    nextImageExportOptimizer_storePicturesInWEBP: 'true',
+    nextImageExportOptimizer_generateAndUseBlurImages: 'true',
   }
 };
 

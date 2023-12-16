@@ -1,11 +1,13 @@
+'use client';
+
 import { Button, Popover, PopoverTrigger, PopoverContent, PopoverCloseButton, PopoverBody, Stack, InputGroup, InputLeftAddon, VStack, Box, Center } from '@chakra-ui/react';
-import { FormSliderInput } from '../../_components/forms/inputs/Slider';
-import { Form } from '../../_components/forms/Form';
-import { FormButton } from '../../_components/forms/FormButton';
-import { FormInput } from '../../_components/forms/inputs/Input';
+import { FormSliderInput } from '../../_common/components/forms/inputs/Slider';
+import { Form } from '../../_common/components/forms/Form';
+import { FormInput } from '../../_common/components/forms/inputs/Input';
 import { initialSettingValues } from '../_values/_constants';
-import { Bold, Small } from '../../_components/parts/Text';
+import { Small } from '../../_common/components/parts/Text';
 import { resolver } from '../_values/schema';
+import { FormButton } from '../../_common/components/forms/parts/FormButton';
 
 
 
