@@ -13,7 +13,6 @@ config.autoAddCss = false;
 
 
 
-
 export default function RootLayout({ children }: PropsWithChildren) {
 
   return (
