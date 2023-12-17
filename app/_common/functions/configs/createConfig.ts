@@ -13,5 +13,5 @@ export const createConfig = (customConfig: CustomConfigType): ConfigType => {
         basePath: ''
     };
 
-    return Object.assign(customConfig, defaultConfig);
+    return Object.assign(defaultConfig, customConfig);
 };
