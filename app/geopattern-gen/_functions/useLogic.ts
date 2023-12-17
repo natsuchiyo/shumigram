@@ -7,7 +7,6 @@ import { bgColorAtom, circlesAtom } from "../_values/states";
 import { useSearchParams } from "next/navigation";
 import { createCirclesFromParams } from "./createCirclesFromParams";
 import { createQueryParams } from "./createQueryParams";
-import config from "../../_config/config";
 
 
 
@@ -82,10 +81,6 @@ export const useLogic = () => {
 
         const circles = await snapshot.getPromise(circlesAtom);
 
-        console.log('↓--------------------------------------config-----------------------------------');
-        console.log(window.location.pathname);
-
-        // window.history.replaceState(null, '', `${config.basePath}/${pageName}?${createQueryParams(circles, bgColor)}`);
         window.history.replaceState(null, '', `${window.location.pathname}?${createQueryParams(circles, bgColor)}`);
 
         radiansListRef.current = createInitialRadiansList(circles);
@@ -95,7 +90,6 @@ export const useLogic = () => {
         circlesRef.current = circles;
         bgColorRef.current = bgColor;
 
-        // drawInitialLine();
         reset();
     });
 

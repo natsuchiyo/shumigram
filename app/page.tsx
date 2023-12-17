@@ -9,9 +9,6 @@ import { listedPathList } from './_common/values/listedPathList';
 
 
 
-console.log('↓-------------------------------config------------------------------------------');
-console.log(config);
-
 
 export default function TopPage() {
 

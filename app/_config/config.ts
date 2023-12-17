@@ -1,9 +1,6 @@
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { createConfig } from "../_common/functions/configs/createConfig";
 
-console.log('↓-------------------------------process.env------------------------------------------');
-console.log(process.env);
-
 
 
 export default createConfig({
