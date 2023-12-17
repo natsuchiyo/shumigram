@@ -29,7 +29,7 @@ export function SampleSelect() {
             value={sampleIndex}
             optionList={optionList}
             onChangeValue={changeSample}
-            width='10em'
+            width='12em'
         />
     );
 };
