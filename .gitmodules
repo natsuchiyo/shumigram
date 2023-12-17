@@ -1,0 +1,3 @@
+[submodule "app/_common"]
+	path = app/_common
+	url = https://github.com/natsuchiyo/_common.git
