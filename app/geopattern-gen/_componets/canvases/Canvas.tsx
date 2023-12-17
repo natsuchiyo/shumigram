@@ -1,7 +1,6 @@
-import { MutableRefObject, PropsWithChildren } from 'react';
+import { MutableRefObject } from 'react';
 import { canvasSize } from '../../_values/constants';
 import { Box } from '@chakra-ui/react';
-import { BgLayer } from './BgLayer';
 
 
 
@@ -19,7 +18,6 @@ export function Canvas(props: {
             overflow='hidden'
             margin='auto'
         >
-            <BgLayer />
             <canvas
                 ref={props.lowerCanvasRef}
                 width={canvasSize}

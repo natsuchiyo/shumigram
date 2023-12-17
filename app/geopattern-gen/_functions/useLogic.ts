@@ -96,8 +96,8 @@ export const useLogic = () => {
 
     const reset = () => {
 
-        clearCanvas(getContext());
-        clearCanvas(getUpperContext());
+        // clearCanvas(getContext());
+        // clearCanvas(getUpperContext());
 
         drawInitialLine();
     };
@@ -109,6 +109,7 @@ export const useLogic = () => {
         const centerCoordList = createCenterCoordList(startCoordListRef.current);
 
         fillBgColor(bgColorRef.current, getContext());
+
         drawLines('drawNeedle', centerCoordList, startCoordListRef.current, circles, getUpperContext());
     };
 
