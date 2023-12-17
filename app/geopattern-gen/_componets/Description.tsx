@@ -1,6 +1,6 @@
 import ExportedImage from 'next-image-export-optimizer';
 import { DescriptionArea, DescriptionSection, DescripSubArea } from '../../_common/components/pieces/Descriptions';
-import { getImgPath } from '../../_common/functions/urls/getImgPath';
+import { getImgFilePath } from '../../_common/functions/urls/getImgPath';
 import { pageName } from '../_values/constants';
 import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 
@@ -24,7 +24,11 @@ export function Description() {
             <DescriptionSection title='設定項目'>
                 各設定項目の意味は次の図のようになります。
                 <Box aspectRatio={1} position='relative' maxWidth='lg' margin='auto'>
-                    <ExportedImage fill src={getImgPath(pageName, 'description.svg')} alt='説明' />
+                    <ExportedImage
+                        fill
+                        src={getImgFilePath('description.svg', pageName)}
+                        alt='説明'
+                    />
                 </Box>
                 0.01秒ごとに線を回転角度の値だけ回転させて、軌道線を描いていきます。
                 長さは0～999、回転角度は0～180の範囲で設定可能です。

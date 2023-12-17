@@ -1,15 +1,12 @@
 
 import { PropsWithChildren } from 'react';
-import { ColorModeScript } from '@chakra-ui/react';
 import { Layout } from './_common/components/layouts/Layout';
-import { MetaHead } from './_common/components/parts/MetaHead';
 import { Providers } from './_common/components/layouts/Providers';
 
 
 // これがないと初回レンダリング時にアイコンサイズがおかしくなる
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { customTheme } from './_common/theme/theme';
 config.autoAddCss = false;
 
 

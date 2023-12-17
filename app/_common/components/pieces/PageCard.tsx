@@ -5,6 +5,7 @@ import { Tags } from "../parts/Tags";
 import { Small } from "../parts/Text";
 import { getPageInfo } from "../../functions/urls/usePageInfo";
 import config from "../../../_config/config";
+import { getImgFilePath } from "../../functions/urls/getImgPath";
 
 
 
@@ -33,7 +34,7 @@ export const PageCard = ({ path }: { path: string; }) => {
 
             <ExportedImage
                 priority
-                src={`${config.basePath}/img${path}.webp`}
+                src={getImgFilePath(`${path}.webp`)}
                 alt={pageInfo.title}
                 width={300}
                 height={200}

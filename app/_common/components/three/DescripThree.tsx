@@ -1,6 +1,5 @@
 import { SimpleTable } from '../tables/SimpleTable';
 import { Center } from '@chakra-ui/react';
-import { Headline } from '../parts/Headline';
 import { DescriptionSection } from '../pieces/Descriptions';
 
 

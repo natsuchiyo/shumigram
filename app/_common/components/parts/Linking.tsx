@@ -8,7 +8,7 @@ import { getBrandColor } from '../../functions/theme';
 export function Linking({ href, ...props }: LinkProps & { href: string; }) {
 
     return (
-        <NextLink passHref legacyBehavior href={href} prefetch={false}>
+        <NextLink passHref legacyBehavior href={href}>
             <ChakraLink color='link' {...props as any} />
         </NextLink>
     );
