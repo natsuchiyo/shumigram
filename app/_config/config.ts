@@ -10,5 +10,5 @@ export default createConfig({
     accentColor: "green",
     clickableColor: "orange",
     headerIcon: faLaptopCode,
-    basePath: process.env.GITHUB_PAGES ? "/shumigram" : ""
+    // basePath: process.env.GITHUB_PAGES ? "/shumigram" : ""
 });
