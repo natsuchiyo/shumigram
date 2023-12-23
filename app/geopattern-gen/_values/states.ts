@@ -44,3 +44,15 @@ export const circleValueSelectorFamily = selectorFamily<any, { circleIndex: numb
         set(circlesAtom, newCircles);
     }
 });
+
+
+export const currentUrlAtom = atom({
+    key: 'currentUrlAtom',
+    default: ''
+});
+
+
+export const isRunningAtom = atom({
+    key: 'isRunningAtom',
+    default: false
+});

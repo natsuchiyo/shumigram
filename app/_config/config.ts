@@ -6,9 +6,9 @@ import { createConfig } from "../_common/functions/configs/createConfig";
 export default createConfig({
     websiteLabelName: "シュミグラム",
     websiteName: "shumigram",
-    brandColor: "pink",
+    brandColor: "orange",
     accentColor: "green",
-    clickableColor: "orange",
+    clickableColor: "pink",
     headerIcon: faLaptopCode,
-    // basePath: process.env.GITHUB_PAGES ? "/shumigram" : ""
+    domain: "shumigram.com"
 });

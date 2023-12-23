@@ -1,4 +1,4 @@
-import { CirclesType } from "../_types/_types";
+import { CirclesType } from "../../_types/_types";
 
 
 export const createQueryParams = (circles: CirclesType, bgColor: string) => {

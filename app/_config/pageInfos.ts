@@ -13,7 +13,7 @@ export default createPageInfos([
         'geopattern-gen',
         {
             _title: '幾何学模様メーカー',
-            description: '大量の個体を発生させてじゃんけんで争います。',
+            description: '線を回転させて幾何学模様を描きます。線の長さや回転角度を自由に設定できます。',
             showNav: true
         }
     ],

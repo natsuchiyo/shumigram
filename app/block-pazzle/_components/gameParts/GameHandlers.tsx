@@ -28,8 +28,14 @@ const GameHandlersComponent = memo(function GameHandlersComponent(props: {
                     size='md'
                     boxShadow='lg'
                 />
-                <CrossButton text='移動' clickDirection={props.handlers.moveBlock} />
-                <CrossButton text='回転' clickDirection={props.handlers.rotateBlock} />
+                <CrossButton
+                    text='移動'
+                    clickDirection={props.handlers.moveBlock}
+                />
+                <CrossButton
+                    text='回転'
+                    clickDirection={props.handlers.rotateBlock}
+                />
             </HStack>
 
             <HStack justifyContent='right' gap='2' marginTop='4'>

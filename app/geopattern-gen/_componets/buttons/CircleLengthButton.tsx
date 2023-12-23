@@ -1,14 +1,16 @@
 import { Button } from "@chakra-ui/react";
 import { useRecoilCallback, useRecoilValue } from "recoil";
 import { circlesLengthSelector, circlesAtom } from "../../_values/states";
-import { createDefaultCircle } from "../../_functions/utils";
+import { createDefaultCircle } from "../../_functions/utils/utils";
 import { maxCirclesLength } from "../../_values/constants";
 
 
 
 export function CircleLengthButton({ type }: { type: 'add' | 'delete'; }) {
 
+
     const circlesLength = useRecoilValue(circlesLengthSelector);
+
 
     const defaultProps = type === 'add'
         ? {
@@ -21,15 +23,16 @@ export function CircleLengthButton({ type }: { type: 'add' | 'delete'; }) {
         };
 
 
+
     const onClick = useRecoilCallback(({ snapshot, set }) => async () => {
 
         const newCircles = [...await snapshot.getPromise(circlesAtom)];
+
         if (type === 'add') {
             newCircles.push(createDefaultCircle());
         } else {
             newCircles.pop();
         }
-
 
         set(circlesAtom, newCircles);
     });

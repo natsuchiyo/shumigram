@@ -1,5 +1,5 @@
-import { CircleType, CirclesType, CoordListType, CoordType, DrawKeyType } from "../_types/_types";
-import { canvasHalfSize, canvasSize } from "../_values/constants";
+import { CircleType, CirclesType, CoordListType, CoordType, DrawKeyType } from "../../_types/_types";
+import { canvasHalfSize, canvasSize } from "../../_values/constants";
 
 
 
@@ -27,36 +27,6 @@ export const nextCoords = (radiansList: number[], circles: CirclesType) => {
 };
 
 
-export const drawLine = (prevCoord: CoordType, nextCoord: CoordType, ctx: CanvasRenderingContext2D) => {
-
-    ctx.beginPath();
-
-    ctx.moveTo(...prevCoord);
-
-    ctx.lineTo(...nextCoord);
-
-    ctx.stroke();
-};
-
-
-export const drawLines = (
-    drawKey: DrawKeyType,
-    startCoordList: CoordListType,
-    endCoordList: CoordListType,
-    circles: CirclesType,
-    ctx: CanvasRenderingContext2D,
-) => {
-
-    circles.forEach((circle, i) => {
-
-        if (!circle[drawKey]) return;
-
-        ctx.strokeStyle = circle.color;
-
-        drawLine(startCoordList[i], endCoordList[i], ctx);
-    });
-};
-
 
 export const createInitialStartCoords = (circles: CirclesType) => {
 
@@ -70,13 +40,7 @@ export const createInitialStartCoords = (circles: CirclesType) => {
         startCoord.push([0, -totalLineLength]);
     });
 
-
     return startCoord;
-};
-
-
-export const clearCanvas = (ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(-canvasHalfSize, -canvasHalfSize, canvasSize, canvasSize);
 };
 
 
@@ -110,12 +74,6 @@ export const createInitialRadiansList = (circles: CirclesType) => {
     return circles.map(() => Math.PI * 1.5);
 };
 
-
-export const fillBgColor = (bgColor: string, ctx: CanvasRenderingContext2D) => {
-    ctx.beginPath();
-    ctx.fillStyle = bgColor;
-    ctx.fillRect(-canvasHalfSize, -canvasHalfSize, canvasSize, canvasSize);
-};
 
 
 

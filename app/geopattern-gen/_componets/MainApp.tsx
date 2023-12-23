@@ -1,44 +1,39 @@
 'use client';
 
-import { HStack, VStack, Button, Box } from '@chakra-ui/react';
-import { useLogic } from '../_functions/useLogic';
+import { VStack, Box } from '@chakra-ui/react';
 import { Canvas } from './canvases/Canvas';
 import { Inputs } from './inputs/Inputs';
+import { GeopatternTweet } from './buttons/Tweet';
+import { ControlButtons } from './buttons/ControlButtons';
+import { useRefs } from '../_functions/useRefs';
+import { GeopatternContext } from './GeopatternContext';
+
 
 
 
 export function MainApp() {
 
-
-    const {
-        start,
-        stop,
-        reset,
-        apply,
-        canvasRef,
-        upperCanvasRef,
-        isRunning,
-    } = useLogic();
-
+    const value = useRefs();
 
     return (
-        <Box width='full'>
+        <GeopatternContext.Provider value={value}>
 
-            <Canvas lowerCanvasRef={canvasRef} upperCanvasRef={upperCanvasRef} />
+            <Box width='full' paddingX={4}>
 
-            <VStack spacing={4} marginTop={2}>
+                <Canvas />
 
-                <HStack flexWrap='wrap'>
-                    <Button onClick={start} isDisabled={isRunning}>スタート</Button>
-                    <Button onClick={stop}>ストップ</Button>
-                    <Button onClick={reset}>リセット</Button>
-                    <Button onClick={apply}>設定反映</Button>
-                </HStack>
+                <VStack spacing={8} marginTop={2}>
 
-                <Inputs />
+                    <ControlButtons />
 
-            </VStack>
+                    <Inputs />
 
-        </Box>
+                </VStack>
+
+
+
+            </Box>
+
+        </GeopatternContext.Provider>
     );
 };

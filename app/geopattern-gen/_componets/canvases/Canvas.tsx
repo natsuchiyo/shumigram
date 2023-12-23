@@ -1,13 +1,16 @@
-import { MutableRefObject } from 'react';
+import { useContext } from 'react';
 import { canvasSize } from '../../_values/constants';
 import { Box } from '@chakra-ui/react';
+import { GeopatternContext } from '../GeopatternContext';
 
 
 
-export function Canvas(props: {
-    lowerCanvasRef: MutableRefObject<HTMLCanvasElement | null>;
-    upperCanvasRef: MutableRefObject<HTMLCanvasElement | null>;
-}) {
+export function Canvas() {
+
+
+    const { lowerCanvasRef, upperCanvasRef } = useContext(GeopatternContext);
+
+
     return (
         <Box
             position='relative'
@@ -19,7 +22,7 @@ export function Canvas(props: {
             margin='auto'
         >
             <canvas
-                ref={props.lowerCanvasRef}
+                ref={lowerCanvasRef}
                 width={canvasSize}
                 height={canvasSize}
                 style={{
@@ -31,7 +34,7 @@ export function Canvas(props: {
                 }}
             />
             <canvas
-                ref={props.upperCanvasRef}
+                ref={upperCanvasRef}
                 width={canvasSize}
                 height={canvasSize}
                 style={{

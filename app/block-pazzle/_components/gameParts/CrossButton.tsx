@@ -1,13 +1,14 @@
-import { memo, MouseEvent, MouseEventHandler } from 'react';
+import { memo } from 'react';
 import { Button, ButtonProps, Center, Flex } from '@chakra-ui/react';
 import { Bold } from '../../../_common/components/parts/Text';
+import { getClickableColor } from '../../../_common/functions/theme';
 
 
 
 
 export const CrossButton = memo(function CrassButton(props: {
     text: string,
-    clickDirection(direction: string): void;
+    clickDirection: (direction: 'U' | 'D' | 'L' | 'R') => void;
 }) {
 
 
@@ -26,11 +27,17 @@ export const CrossButton = memo(function CrassButton(props: {
             flexDirection='column'
         >
             <UpButton onClick={onClick} value='U' />
+
             <Bold>{props.text}</Bold>
+
             <DownButton onClick={onClick} value='D' />
+
             <Flex position='absolute' width='full' justifyContent='space-between'>
+
                 <LeftButton onClick={onClick} value='L' />
+
                 <RightButton onClick={onClick} value='R' />
+
             </Flex>
         </Center>
     );
@@ -58,8 +65,8 @@ const UpButton = (props: ButtonProps) => {
             {...props as any}
             paddingLeft='2px'
             borderWidth='0 18px 18px 20px'
-            borderBottomColor='green.500'
-            _hover={{ borderBottomColor: 'green.700' }}
+            borderBottomColor='button'
+            _hover={{ borderBottomColor: getClickableColor(600) }}
         />
     );
 };
@@ -73,8 +80,8 @@ const RightButton = (props: ButtonProps) => {
             {...props as any}
             paddingTop='4px'
             borderWidth='13px 0 13px 22px'
-            borderLeftColor='green.500'
-            _hover={{ borderLeftColor: 'green.700' }}
+            borderLeftColor='button'
+            _hover={{ borderLeftColor: getClickableColor(600) }}
         />
     );
 };
@@ -88,8 +95,8 @@ const DownButton = (props: ButtonProps) => {
             {...props as any}
             paddingLeft='2px'
             borderWidth='18px 18px 0 18px'
-            borderTopColor='green.500'
-            _hover={{ borderTopColor: 'green.700' }}
+            borderTopColor='button'
+            _hover={{ borderTopColor: getClickableColor(600) }}
         />
     );
 };
@@ -103,8 +110,8 @@ const LeftButton = (props: ButtonProps) => {
             {...props as any}
             paddingTop='4px'
             borderWidth='13px 22px 13px 0'
-            borderRightColor='green.500'
-            _hover={{ borderRightColor: 'green.600' }}
+            borderRightColor='button'
+            _hover={{ borderRightColor: getClickableColor(600) }}
         />
     );
 };

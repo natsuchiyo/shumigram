@@ -1,5 +1,5 @@
 import { ReadonlyURLSearchParams } from "next/navigation";
-import { GeometricPatternDataType } from "../_types/_types";
+import { GeometricPatternDataType } from "../../_types/_types";
 
 
 
