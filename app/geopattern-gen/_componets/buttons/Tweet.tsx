@@ -9,8 +9,7 @@ export function GeopatternTweet() {
 
     const currentUrl = useRecoilValue(currentUrlAtom);
 
-    const text = `#幾何学模様メーカー
-    `;
+    const text = `#幾何学模様メーカー`;
 
     return <TweetButton text={text} url={config.baseUrl + currentUrl} />;
 };
