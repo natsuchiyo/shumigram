@@ -41,7 +41,7 @@ export function Description() {
             </DescriptionSection>
 
             <DescriptionSection title='模様作成のコツ'>
-                <UnorderedList>
+                <UnorderedList spacing={4}>
                     <ListItem>
                         回転角度が0度に近いと丸々とした図形を描き、180度に近いほどギザギザした図形を描きます。
                     </ListItem>

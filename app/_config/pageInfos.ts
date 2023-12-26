@@ -13,7 +13,7 @@ export default createPageInfos([
         'geopattern-gen',
         {
             _title: '幾何学模様メーカー',
-            description: '線を回転させて幾何学模様を描きます。線の長さや回転角度を自由に設定できます。',
+            description: '線を回転させて幾何学模様を描きます。線の長さや回転角度を変えると予想外な模様ができたりします。',
             showNav: true
         }
     ],
